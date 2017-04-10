@@ -1,9 +1,10 @@
 public class Bus{
   private Person[] passengers;
 
-  // public void add(Person person){
+  public Bus(){
+    this.passengers = new Person[9];
+  }
 
-  // }
 
   public int passengerCount(){
     int count = 0;
@@ -13,6 +14,18 @@ public class Bus{
       }
     }
     return count;
+  }
+
+  public void addToBus(Person person){
+    // if(isBusFull()){
+    //   return;
+    // }
+    int passengerCount = passengerCount();
+    this.passengers[passengerCount] = person;
+  }
+
+  public boolean isBusFull(){
+    return passengerCount() == passengers.length;
   }
 
 }
