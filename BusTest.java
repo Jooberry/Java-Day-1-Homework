@@ -38,4 +38,11 @@ public class BusTest{
     assertEquals(true, this.bus.isBusFull());
   }
 
+  @Test
+  public void shouldEmptyBusAfterDropoff(){
+    this.bus.addToBus(this.person);
+    this.bus.dropoff();
+    assertEquals(0, this.bus.passengerCount());
+  }
+
 }

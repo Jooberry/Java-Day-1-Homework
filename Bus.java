@@ -24,6 +24,12 @@ public class Bus{
     this.passengers[passengerCount] = person;
   }
 
+  public void dropoff(){
+    for(int i = 0; i < passengers.length; i++){
+      this.passengers[i] = null;
+    }
+  }
+
   public boolean isBusFull(){
     return passengerCount() == passengers.length;
   }
