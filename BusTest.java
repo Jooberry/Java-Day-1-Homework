@@ -23,6 +23,14 @@ public class BusTest{
   }
 
   @Test
+  public void cannotAddPersonWhenBusFull(){
+    for(int i = 0; i < 10; i++){
+      this.bus.addToBus(person);
+    }
+    assertEquals(9, this.bus.passengerCount());
+  }
+
+  @Test
   public void busIsFull(){
     for(int i = 0; i < 9; i++){
       this.bus.addToBus(person);

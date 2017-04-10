@@ -17,9 +17,9 @@ public class Bus{
   }
 
   public void addToBus(Person person){
-    // if(isBusFull()){
-    //   return;
-    // }
+    if(isBusFull()){
+      return;
+    }
     int passengerCount = passengerCount();
     this.passengers[passengerCount] = person;
   }
